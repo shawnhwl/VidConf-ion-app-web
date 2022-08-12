@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: web-pv-block
+spec:
+  capacity:
+    storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /tmp/web-pv-block #NOTE: not for production
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: manual

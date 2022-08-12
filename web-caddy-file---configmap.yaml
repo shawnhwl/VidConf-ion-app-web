@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  #NOTE: http://ip-address
+  Caddyfile: |
+    http://192.168.31.209:9090 {
+
+      root * /app/dist
+      file_server
+
+      tls internal
+
+      reverse_proxy /room.RoomSignal/Signal signal:5551 {
+      }
+      reverse_proxy /rtc.RTC/Signal signal:5551 {
+      }
+    }
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: web-caddy-file
