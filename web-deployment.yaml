@@ -26,7 +26,7 @@ spec:
         io.kompose.service: web
     spec:
       containers:
-        - image: dleeha/ion-app-web:latest #NOTE: to automate build
+        - image: howeli/vidconf-ion-app-web_web:latest #NOTE: to automate build
           name: web
           ports:
             - containerPort: 9090
