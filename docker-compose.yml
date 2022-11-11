@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   web:
-    image: howeli/vidconf-ion-app-web:v1.1.0
+    image: howeli/vidconf-ion-app-web:1.1.0
     build: .
     volumes:
       # Dev caddy file
